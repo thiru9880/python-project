@@ -18,7 +18,7 @@ pipeline{
         stage('test'){
             steps{
                 sh 'python3 test_test1.py'
-                junit 'reports/*.xml'
+                junit '**/test-reports/*.xml'
             }
         }
 
