@@ -19,7 +19,7 @@ pipeline{
             steps{
                 sh 'python3 test_test1.py'
                 // junit '**/test-reports/*.xml'
-                sh '.py test --verboose --junit-xml test-reports/results.xml sources/test_test1.py'
+                sh 'python3 test --verboose --junit-xml test-reports/results.xml sources/test_test1.py'
 
             }
         }
