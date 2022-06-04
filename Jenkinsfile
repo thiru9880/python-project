@@ -20,7 +20,7 @@ pipeline{
                 sh 'pip install -U pytest'
                 sh 'python3 test_test1.py'
                 // junit '**/test-reports/*.xml'
-                sh 'pytest --verboose --junit-xml test-reports/results.xml sources/test_test1.py'
+                sh 'pytest --doctest-modules --junitxml=junit/test-results.xml --cov=. --cov-report=xml'
 
             }
         }
